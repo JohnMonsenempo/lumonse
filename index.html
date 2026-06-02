@@ -1,0 +1,62 @@
+<!-- site web pour la gestion des ventes des vêtements -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L  U  M  O  N   S  E</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="notification"></div>
+    <header>
+        <h1>L  U  M  O  N   S  E</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Produits</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">À propos</a></li> 
+                <li><a href="#">🛒 Panier (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Bienvenue chez LUMONSE</h2>
+            <p>Découvrez notre collection de vêtements tendance et de qualité.</p>
+            <a href="#" class="btn">Voir les produits</a>
+        </section>
+
+        <section class="products">
+            <h2>Nos Produits</h2>
+            <div class="product-list" id="product-list">
+                <!-- Les produits seront chargés ici par JavaScript -->
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contactez-nous</h2>
+            <p id="form-message"></p>
+            <form id="contact-form" action="#" method="post">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 LUMONSE. Tous droits réservés.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

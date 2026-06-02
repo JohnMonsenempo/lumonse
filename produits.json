@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "nom": "Veste en cuir",
+        "prix": 99,
+        "image": "product1.jpg"
+    },
+    {
+        "id": 2,
+        "nom": "Manteau d'hiver",
+        "prix": 149,
+        "image": "product2.jpg"
+    },
+    {
+        "id": 3,
+        "nom": "Robe élégante",
+        "prix": 79,
+        "image": "product3.jpg"
+    }
+]
+
