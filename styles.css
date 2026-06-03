@@ -1,395 +1,149 @@
-/* Styles pour le site web de LUMONSE */
+/* ================================
+   LUMONSE — Styles globaux
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Raleway:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #FAFAF8;
+    color: #1A1A1A;
+    font-weight: 300;
 }
+
+/* ================================
+   HEADER & NAVIGATION
+================================ */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #1A1A1A;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #FAFAF8;
+    letter-spacing: 8px;
+}
+
 nav {
-    background-color: #444;
-    padding: 10px 0;
-}
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-}
-nav a:hover {
-    text-decoration: underline;
-}
-main {
-    padding: 20px;
-}
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
     width: 100%;
-    bottom: 0;
-}
-
-/* Grille de produits */
-.product-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px 0;
-}
-
-.product-item {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.product-item img {
-    width: 100%;
-    border-radius: 6px;
-}
-
-.product-item h3 {
-    margin: 10px 0 5px;
-    color: #333;
-}
-
-.product-item p {
-    color: #666;
-    font-size: 14px;
-}
-
-.product-item .price {
-    color: #e91e63;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* Bouton */
-.btn {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 24px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 15px;
-    margin-top: 10px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #555;
-}
-
-/* Section hero */
-.hero {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.hero h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #ccc;
-}
-
-.hero .btn {
-    background-color: #fff;
-    color: #222;
-    font-weight: bold;
-}
-
-.hero .btn:hover {
-    background-color: #ddd;
-}
-
-/* Navigation horizontale */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    align-items: center;
 }
 
-nav ul li {
-    display: inline;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #FAFAF8;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #C9A96E;
 }
 
-/* Bouton hamburger — caché sur grand écran */
 .hamburger {
     display: none;
 }
 
-/* Formulaire de contact */
-.contact {
-    max-width: 600px;
-    margin: 40px auto;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.contact label {
-    font-weight: bold;
-    color: #333;
-}
-
-.contact input,
-.contact textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 15px;
-    font-family: Arial, sans-serif;
-}
-
-.contact textarea {
-    height: 120px;
-    resize: vertical;
-}
-
-.contact button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 24px;
-    border: none;
-    border-radius: 4px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact button:hover {
-    background-color: #555;
-}
-
-/* Titre des sections */
-.products h2,
-.contact h2 {
+/* ================================
+   HERO
+================================ */
+.hero {
+    background-color: #1A1A1A;
+    color: #FAFAF8;
     text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
     margin-bottom: 20px;
-    color: #333;
+    letter-spacing: 2px;
 }
 
-/* Notification */
-#notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    padding: 14px 24px;
-    border-radius: 6px;
-    font-size: 15px;
-    opacity: 0;
-    transition: opacity 0.4s;
-    z-index: 1000;
-}
-
-#notification.visible {
-    opacity: 1;
-}
-
-/* Message formulaire */
-#form-message {
-    text-align: center;
-    font-size: 15px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-#form-message.success {
-    color: #2e7d32;
-}
-
-#form-message.error {
-    color: #c62828;
-}
-
-/* Responsive mobile */
-@media (max-width: 768px) {
-    .product-list {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h2 {
-        font-size: 24px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 10px;
-    }
-
-    .hamburger span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: #fff;
-        border-radius: 3px;
-        transition: all 0.3s;
-    }
-
-    #nav-menu {
-        display: none;
-        flex-direction: column;
-        gap: 0;
-        background-color: #444;
-        width: 100%;
-    }
-
-    #nav-menu.ouvert {
-        display: flex;
-    }
-
-    #nav-menu li {
-        text-align: center;
-        padding: 12px 0;
-        border-top: 1px solid #555;
-    }
-
-    nav ul {
-        display: none;
-    }
-}
-
-/* Barre de recherche */
-.search-bar {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.search-bar input {
-    width: 50%;
-    padding: 10px 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 15px;
-    font-family: Arial, sans-serif;
-}
-
-.search-bar input:focus {
-    outline: none;
-    border-color: #333;
-}
-
-/* Filtres */
-.filtres {
-    text-align: center;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.filtre-btn {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #333;
-    padding: 8px 20px;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.filtre-btn:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-.filtre-btn.actif {
-    background-color: #333;
-    color: #fff;
-}
-
-/* Page panier */
-.panier {
-    max-width: 700px;
-    margin: 40px auto;
-}
-
-.panier h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.panier-item {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr auto;
-    align-items: center;
-    gap: 10px;
-    background-color: #fff;
-    padding: 14px 16px;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.panier-item button {
-    background: none;
-    border: none;
-    color: #c62828;
+.hero p {
     font-size: 16px;
+    margin-bottom: 40px;
+    color: #B0B0B0;
+    letter-spacing: 1px;
+}
+
+/* ================================
+   BOUTONS
+================================ */
+.btn {
+    display: inline-block;
+    background-color: #C9A96E;
+    color: #1A1A1A;
+    padding: 12px 32px;
+    border-radius: 0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    border: none;
     cursor: pointer;
 }
 
-.panier-total {
-    text-align: right;
-    margin-top: 20px;
-    font-size: 18px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
+.btn:hover {
+    background-color: #B8944F;
 }
 
-/* Animations au scroll */
+/* ================================
+   PRODUITS
+================================ */
+main {
+    padding: 40px;
+}
+
+.products h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #1A1A1A;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 30px 0;
+}
+
 .product-item {
+    background-color: #FFFFFF;
+    text-align: center;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -400,44 +154,125 @@ nav ul li a:hover {
     transform: translateY(0);
 }
 
-/* Page à propos */
-.apropos-contenu {
-    max-width: 800px;
+.product-item img {
+    width: 100%;
+    display: block;
+}
+
+.product-item h3 {
+    margin: 16px 0 6px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #1A1A1A;
+    letter-spacing: 1px;
+}
+
+.product-item p {
+    color: #C9A96E;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+/* ================================
+   RECHERCHE & FILTRES
+================================ */
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 12px 20px;
+    border: 1px solid #D0D0D0;
+    border-radius: 0;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    background-color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #1A1A1A;
+}
+
+.filtres {
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filtre-btn {
+    background-color: transparent;
+    color: #1A1A1A;
+    border: 1px solid #1A1A1A;
+    padding: 8px 20px;
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 0;
+}
+
+.filtre-btn:hover,
+.filtre-btn.actif {
+    background-color: #1A1A1A;
+    color: #FAFAF8;
+}
+
+/* ================================
+   FORMULAIRE CONTACT
+================================ */
+.contact {
+    max-width: 600px;
     margin: 40px auto;
+}
+
+.contact form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 16px;
 }
 
-.apropos-bloc {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+.contact label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1A1A1A;
 }
 
-.apropos-bloc h3 {
-    color: #333;
-    margin-bottom: 12px;
-    font-size: 20px;
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border: 1px solid #D0D0D0;
+    border-radius: 0;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    background-color: #FFFFFF;
 }
 
-.apropos-bloc ul {
-    list-style: none;
-    padding: 0;
+.contact textarea {
+    height: 120px;
+    resize: vertical;
 }
 
-.apropos-bloc ul li {
-    padding: 6px 0;
-    border-bottom: 1px solid #f0f0f0;
-    color: #555;
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    border-color: #1A1A1A;
 }
 
-.apropos-bloc ul li:last-child {
-    border-bottom: none;
-}
-
-/* Page contact */
+/* ================================
+   PAGE CONTACT COMPLÈTE
+================================ */
 .contact-page {
     max-width: 1000px;
     margin: 40px auto;
@@ -452,39 +287,43 @@ nav ul li a:hover {
 
 .contact-form-bloc,
 .contact-info-bloc {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background-color: #FFFFFF;
+    padding: 40px;
 }
 
 .contact-form-bloc h3,
 .contact-info-bloc h3 {
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #1A1A1A;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
 }
 
 .contact-form-bloc form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
 .contact-form-bloc label {
-    font-weight: bold;
-    color: #333;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1A1A1A;
 }
 
 .contact-form-bloc input,
 .contact-form-bloc textarea,
 .contact-form-bloc select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 15px;
-    font-family: Arial, sans-serif;
+    padding: 12px;
+    border: 1px solid #D0D0D0;
+    border-radius: 0;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    background-color: #FAFAF8;
 }
 
 .contact-form-bloc textarea {
@@ -492,27 +331,33 @@ nav ul li a:hover {
     resize: vertical;
 }
 
-.contact-form-bloc select:focus,
 .contact-form-bloc input:focus,
-.contact-form-bloc textarea:focus {
+.contact-form-bloc textarea:focus,
+.contact-form-bloc select:focus {
     outline: none;
-    border-color: #333;
+    border-color: #1A1A1A;
 }
 
 .contact-info-item {
     display: flex;
     align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 16px;
+    margin-bottom: 24px;
 }
 
 .contact-icon {
-    font-size: 24px;
+    font-size: 20px;
+}
+
+.contact-info-item strong {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .contact-info-item p {
     margin: 4px 0 0;
-    color: #555;
+    color: #6B6B6B;
     font-size: 14px;
 }
 
@@ -521,30 +366,255 @@ nav ul li a:hover {
 }
 
 .faq h3 {
-    color: #333;
-    margin-bottom: 15px;
-    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 16px;
 }
 
 .faq-item {
-    padding: 12px 0;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 14px 0;
+    border-bottom: 1px solid #F0F0F0;
 }
 
 .faq-item strong {
-    color: #333;
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 1px;
 }
 
 .faq-item p {
     margin: 6px 0 0;
-    color: #555;
+    color: #6B6B6B;
     font-size: 14px;
 }
 
-/* Responsive contact */
+/* ================================
+   PAGE PANIER
+================================ */
+.panier {
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.panier h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1A1A1A;
+}
+
+.panier-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    align-items: center;
+    gap: 10px;
+    background-color: #FFFFFF;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.panier-item button {
+    background: none;
+    border: none;
+    color: #C9A96E;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.panier-total {
+    text-align: right;
+    margin-top: 24px;
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    letter-spacing: 1px;
+}
+
+/* ================================
+   PAGE À PROPOS
+================================ */
+.apropos-contenu {
+    max-width: 800px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.apropos-bloc {
+    background-color: #FFFFFF;
+    padding: 40px;
+}
+
+.apropos-bloc h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #1A1A1A;
+    margin-bottom: 16px;
+}
+
+.apropos-bloc p {
+    color: #6B6B6B;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.apropos-bloc ul {
+    list-style: none;
+    padding: 0;
+}
+
+.apropos-bloc ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #F0F0F0;
+    color: #6B6B6B;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.apropos-bloc ul li:last-child {
+    border-bottom: none;
+}
+
+/* ================================
+   NOTIFICATION
+================================ */
+#notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #1A1A1A;
+    color: #FAFAF8;
+    padding: 14px 24px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: 1000;
+}
+
+#notification.visible {
+    opacity: 1;
+}
+
+/* ================================
+   MESSAGES FORMULAIRE
+================================ */
+#form-message {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#form-message.success {
+    color: #2e7d32;
+}
+
+#form-message.error {
+    color: #c62828;
+}
+
+/* ================================
+   TITRES DES SECTIONS
+================================ */
+.products h2,
+.contact h2,
+.panier h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1A1A1A;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+    background-color: #1A1A1A;
+    color: #FAFAF8;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* ================================
+   RESPONSIVE MOBILE
+================================ */
 @media (max-width: 768px) {
+    header {
+        padding: 16px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        align-self: flex-end;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: #FAFAF8;
+        transition: all 0.3s;
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        background-color: #1A1A1A;
+        width: 100%;
+    }
+
+    #nav-menu.ouvert {
+        display: flex;
+    }
+
+    #nav-menu li {
+        text-align: center;
+        padding: 14px 0;
+        border-top: 1px solid #333;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .search-bar input {
+        width: 90%;
     }
 }
