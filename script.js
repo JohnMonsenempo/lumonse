@@ -68,11 +68,13 @@ function afficherProduits(produits) {
                 <h3>${produit.nom}</h3>
                 <p>Prix: ${produit.prix}€</p>
                 <a href="#" class="btn" onclick="ajouterAuPanier('${produit.nom}', ${produit.prix})">
-    Ajouter au panier
-</a>
+                    Ajouter au panier
+                </a>
             </div>
         `;
     });
+
+    animerAuScroll();
 }
 
 document.querySelectorAll('.filtre-btn').forEach(function(btn) {
@@ -90,6 +92,21 @@ document.querySelectorAll('.filtre-btn').forEach(function(btn) {
     });
 });
 
+document.getElementById('search').addEventListener('input', function() {
+    let recherche = this.value.toLowerCase();
+    let produits = document.querySelectorAll('.product-item');
+
+    produits.forEach(function(produit) {
+        let nom = produit.querySelector('h3').innerText.toLowerCase();
+        produit.style.display = nom.includes(recherche) ? 'block' : 'none';
+    });
+});
+
+document.getElementById('hamburger').addEventListener('click', function() {
+    let menu = document.getElementById('nav-menu');
+    menu.classList.toggle('ouvert');
+});
+
 function animerAuScroll() {
     let produits = document.querySelectorAll('.product-item');
     
@@ -105,3 +122,6 @@ function animerAuScroll() {
 
 window.addEventListener('scroll', animerAuScroll);
 window.addEventListener('load', animerAuScroll);
+
+let cartCount = JSON.parse(localStorage.getItem('panier'))?.reduce((acc, p) => acc + p.quantite, 0) || 0;
+document.getElementById('cart-count').innerText = cartCount;
