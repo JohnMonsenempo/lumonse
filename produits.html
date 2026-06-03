@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits - LUMONSE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="notification"></div>
+    <header>
+        <h1>L  U  M  O  N   S  E</h1>
+        <nav>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="panier.html">🛒 Panier (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Nos Produits</h2>
+            <p>Découvrez toute notre collection de vêtements tendance.</p>
+        </section>
+
+        <section class="products">
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Rechercher un produit...">
+            </div>
+
+            <div class="filtres">
+                <button class="filtre-btn actif" data-categorie="tous">Tous</button>
+                <button class="filtre-btn" data-categorie="vestes">Vestes</button>
+                <button class="filtre-btn" data-categorie="manteaux">Manteaux</button>
+                <button class="filtre-btn" data-categorie="robes">Robes</button>
+                <button class="filtre-btn" data-categorie="jeans">Jeans</button>
+                <button class="filtre-btn" data-categorie="pulls">Pulls</button>
+                <button class="filtre-btn" data-categorie="t-shirts">T-shirts</button>
+                <button class="filtre-btn" data-categorie="chaussures">Chaussures</button>
+                <button class="filtre-btn" data-categorie="accessoires">Accessoires</button>
+            </div>
+
+            <div class="product-list" id="product-list">
+                <!-- Les produits seront chargés ici par JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 LUMONSE. Tous droits réservés.
+    </footer>
+    <script src="produits.js"></script>
+</body>
+</html>

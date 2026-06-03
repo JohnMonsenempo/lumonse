@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LUMONSE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="notification"></div>
+    <header>
+        <h1>L  U  M  O  N   S  E</h1>
+        <nav>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#">Produits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="panier.html">🛒 Panier</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Contactez-nous</h2>
+            <p>Notre équipe est là pour vous aider.</p>
+        </section>
+
+        <section class="contact-page">
+            <div class="contact-grid">
+
+                <!-- Formulaire -->
+                <div class="contact-form-bloc">
+                    <h3>Envoyer un message</h3>
+                    <p id="form-message"></p>
+                    <form id="contact-form">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+
+                        <label for="sujet">Sujet</label>
+                        <select id="sujet" name="sujet">
+                            <option value="">Choisir un sujet</option>
+                            <option value="commande">Suivi de commande</option>
+                            <option value="retour">Retour / Remboursement</option>
+                            <option value="produit">Question sur un produit</option>
+                            <option value="autre">Autre</option>
+                        </select>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Décrivez votre demande..." required></textarea>
+
+                        <button type="submit" class="btn">Envoyer le message</button>
+                    </form>
+                </div>
+
+                <!-- Informations de contact -->
+                <div class="contact-info-bloc">
+                    <h3>Nos coordonnées</h3>
+
+                    <div class="contact-info-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>support@lumonse.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Téléphone</strong>
+                            <p>+1 (514) 000-0000</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Adresse</strong>
+                            <p>123 Rue de la Mode, Montréal, QC</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <span class="contact-icon">🕐</span>
+                        <div>
+                            <strong>Horaires</strong>
+                            <p>Lundi – Vendredi : 9h – 18h</p>
+                            <p>Samedi : 10h – 16h</p>
+                        </div>
+                    </div>
+
+                    <div class="faq">
+                        <h3>Questions fréquentes</h3>
+                        <div class="faq-item">
+                            <strong>Quels sont les délais de livraison ?</strong>
+                            <p>Entre 3 et 5 jours ouvrables.</p>
+                        </div>
+                        <div class="faq-item">
+                            <strong>Comment retourner un article ?</strong>
+                            <p>Vous avez 30 jours pour retourner un article non porté.</p>
+                        </div>
+                        <div class="faq-item">
+                            <strong>Livrez-vous à l'international ?</strong>
+                            <p>Oui, nous livrons dans plus de 20 pays.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 LUMONSE. Tous droits réservés.
+    </footer>
+    <script src="contact.js"></script>
+</body>
+</html>

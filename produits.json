@@ -19,5 +19,47 @@
         "prix": 79,
         "image": "product3.jpg",
         "categorie": "robes"
+    },
+    {
+        "id": 4,
+        "nom": "Jean slim",
+        "prix": 59,
+        "image": "product4.jpg",
+        "categorie": "jeans"
+    },
+    {
+        "id": 5,
+        "nom": "T-shirt basique",
+        "prix": 19,
+        "image": "product5.jpg",
+        "categorie": "t-shirts"
+    },
+    {
+        "id": 6,
+        "nom": "Pull en laine",
+        "prix": 49,
+        "image": "product6.jpg",
+        "categorie": "pulls"
+    },
+    {
+        "id": 7,
+        "nom": "Chaussures de sport",
+        "prix": 89,
+        "image": "product7.jpg",
+        "categorie": "chaussures"
+    },
+    {
+        "id": 8,
+        "nom": "Sac à main en cuir",
+        "prix": 129,
+        "image": "product8.jpg",
+        "categorie": "accessoires"
+    },
+    {
+        "id": 9,
+        "nom": "T-shirt oversize",
+        "prix": 19,
+        "image": "product9.jpg",
+        "categorie": "t-shirts"
     }
 ]
