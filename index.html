@@ -12,12 +12,17 @@
     <header>
         <h1>L  U  M  O  N   S  E</h1>
         <nav>
-            <ul>
+            <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+            <ul id="nav-menu">
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#">Produits</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">À propos</a></li> 
-                <li><a href="#">🛒 Panier (<span id="cart-count">0</span>)</a></li>
+                <li><a href="apropos.html">À propos</a></li> 
+                <li><a href="panier.html">🛒 Panier (<span id="cart-count">0</span>)</a></li>
             </ul>
         </nav>
     </header>
@@ -31,6 +36,20 @@
 
         <section class="products">
             <h2>Nos Produits</h2>
+            <section class="products">
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Rechercher un produit...">
+    </div>
+    <div class="filtres">
+    <button class="filtre-btn actif" data-categorie="tous">Tous</button>
+    <button class="filtre-btn" data-categorie="vestes">Vestes</button>
+    <button class="filtre-btn" data-categorie="manteaux">Manteaux</button>
+    <button class="filtre-btn" data-categorie="robes">Robes</button>
+</div>
+    <div class="product-list" id="product-list">
+        <!-- Les produits seront chargés ici par JavaScript -->
+    </div>
+</section>
             <div class="product-list" id="product-list">
                 <!-- Les produits seront chargés ici par JavaScript -->
             </div>

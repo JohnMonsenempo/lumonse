@@ -3,19 +3,21 @@
         "id": 1,
         "nom": "Veste en cuir",
         "prix": 99,
-        "image": "product1.jpg"
+        "image": "product1.jpg",
+        "categorie": "vestes"
     },
     {
         "id": 2,
         "nom": "Manteau d'hiver",
         "prix": 149,
-        "image": "product2.jpg"
+        "image": "product2.jpg",
+        "categorie": "manteaux"
     },
     {
         "id": 3,
         "nom": "Robe élégante",
         "prix": 79,
-        "image": "product3.jpg"
+        "image": "product3.jpg",
+        "categorie": "robes"
     }
 ]
-
