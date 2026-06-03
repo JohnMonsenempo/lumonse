@@ -43,16 +43,19 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     }
 });
 
-let tousLesProduits = [];
+let tousLesProduits = [
+    { id: 1, nom: "Veste en cuir", prix: 99, image: "product1.jpg", categorie: "vestes" },
+    { id: 2, nom: "Manteau d'hiver", prix: 149, image: "product2.jpg", categorie: "manteaux" },
+    { id: 3, nom: "Robe élégante", prix: 79, image: "product3.jpg", categorie: "robes" },
+    { id: 4, nom: "Jean slim", prix: 59, image: "product4.jpg", categorie: "jeans" },
+    { id: 5, nom: "T-shirt basique", prix: 19, image: "product5.jpg", categorie: "t-shirts" },
+    { id: 6, nom: "Pull en laine", prix: 49, image: "product6.jpg", categorie: "pulls" },
+    { id: 7, nom: "Chaussures de sport", prix: 89, image: "product7.jpg", categorie: "chaussures" },
+    { id: 8, nom: "Sac à main en cuir", prix: 129, image: "product8.jpg", categorie: "accessoires" },
+    { id: 9, nom: "T-shirt oversize", prix: 29, image: "product9.jpg", categorie: "t-shirts" }
+];
 
-fetch('produits.json')
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(produits) {
-        tousLesProduits = produits;
-        afficherProduits(produits);
-    });
+afficherProduits(tousLesProduits);
 
 function afficherProduits(produits) {
     let container = document.getElementById('product-list');
